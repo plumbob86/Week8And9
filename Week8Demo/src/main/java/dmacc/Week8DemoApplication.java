@@ -13,16 +13,13 @@ import dmacc.config.ForestBeanConfig;
 import dmacc.repo.IForestRepo;
 
 @SpringBootApplication
-public class Week8DemoApplication implements CommandLineRunner{
+public class Week8DemoApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(Week8DemoApplication.class, args);
 	}
 	
-	@Autowired
-	IForestRepo repo;
-	
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 		doWork();
 	}
@@ -47,8 +44,6 @@ public class Week8DemoApplication implements CommandLineRunner{
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ForestBeanConfig.class);
 		Forest forest = context.getBean("forest", Forest.class);
 
-		
-
 		forest.setName("Black Forest");
 		forest.setLocation("Germany");
 		
@@ -57,6 +52,6 @@ public class Week8DemoApplication implements CommandLineRunner{
 	
 	private List<Forest> getForests(){
 		return repo.findAll();
-	}
+	}*/
 
 }
